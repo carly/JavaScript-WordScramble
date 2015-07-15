@@ -28,13 +28,14 @@
             // Grab the corresponding scrambled word from the SCRAMBLED array
             var scrambledWord = SCRAMBLED[indexNumber];
             // prompt the user to guess the original word when given the scrambled word
-            var guessWord = prompt("Guess the word:" + scrambledWord);
+            var guessWord = prompt("Guess the word: " + scrambledWord);
+            var modified_guessWord = guessWord.toLowerCase();
 
 
             // If the user guesses wrong, tell them they were wrong and the right word.
-            if (guessWord === answerWord){
+            if (guessWord === modified_guessWord){
                 alert("Congratulations!");
-            } else (guessWord !== answerWord){
+            } else {
                 alert("You suck! The answer is: " + answerWord);
             }
             
